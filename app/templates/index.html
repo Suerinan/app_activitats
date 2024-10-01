@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Activitats</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Gestió d'activitats</h1>
+    <div class="actions">
+        <button class="register-user" onclick="registrarUsuari()">Nou usuari</button>
+        <button class="update-user" onclick="actualitzarUsuari()">Actualitzar info d'usuari</button>
+        <button class="eliminate-user" onclick="eliminarUsuari()">Eliminar usuari</button>
+        <button class="select-users-info" onclick="seleccionarInfoUsuaris()">Consultar info d'usuaris</button>
+    </div>
+
+    <div class="activity-actions">
+        <button class="create-activity" onclick="crearActivitat()">Crear nova activitat</button>
+        <button class="consult-activities" onclick="consultarActivitats()">Consultar activitats</button>
+        <button class="register-activity" onclick="apuntarUsuariActivitat()">Apuntar-se a una activitat</button>
+    </div>
+
+    <div id="forms-container">
+        <div id="registrar-usuari-form"></div>
+        <div id="actualitza-usuari-form"></div>
+        <div id="elimina-usuari-form"></div>
+        <div id="selecciona-usuari-info-form"></div>
+        <div id="crear-activitat-form"></div>
+        <div id="consultar-activitats-form"></div>
+        <div id="apuntar-activitat-form"></div>
+    </div>
+
+    <div class="submit-container">
+        <button id="submit" onclick="envia()" type_message="" hidden="True">Envia</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
