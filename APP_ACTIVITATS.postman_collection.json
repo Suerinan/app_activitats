@@ -96,7 +96,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/appActivitats/user/2s",
+							"raw": "http://localhost:5000/appActivitats/user/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -105,7 +105,7 @@
 							"path": [
 								"appActivitats",
 								"user",
-								"2s"
+								"2"
 							]
 						}
 					},
@@ -155,7 +155,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nom\": \"basket\"\r\n}",
+							"raw": "{\r\n    \"nom\": \"basket2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -173,6 +173,35 @@
 								"appActivitats",
 								"activity",
 								"name"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert_user_sign_in_activity_json",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"2\",\r\n    \"nom_activitat\": \"basket2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/appActivitats/sign_user_activity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"appActivitats",
+								"sign_user_activity"
 							]
 						}
 					},
